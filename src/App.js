@@ -1,10 +1,12 @@
 
 import './App.scss';
+import Nav from './components/Nav'
 
 function App() {
   return (
+    <Nav/>
     
-     <h1>starter</h1>
+   
   );
 }
 
