@@ -30,6 +30,13 @@ hr {
   cursor: pointer;
 }
 
+.basicPadding {
+  padding: 10px;
+  hr {
+    margin-top: 20px;
+  }
+}
+
 /* nav section*/
 
 .nav {
@@ -75,7 +82,7 @@ hr {
 
   .wrapper {
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 75% 25%;
     grid-template-rows: auto;
     gap: 15px;
   }
@@ -106,7 +113,7 @@ hr {
   .description {
     flex: 1;
   }
-  p {
+  h3 {
     align-self: flex-end;
   }
   #color {
@@ -139,3 +146,70 @@ hr {
     cursor: pointer;
   }
 }
+/*checkout section */
+
+.checkout {
+  @extend .basicPadding;
+
+  button {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    margin-top: 30px;
+    font-size: 1.5rem;
+    background-color: #ef394e;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  button:hover {
+    color: rgb(198, 226, 198);
+  }
+}
+
+.suggetion {
+  @extend .basicPadding;
+  overflow: hidden;
+  padding: 10px;
+  margin: 10px;
+
+  .img {
+    position: relative;
+    img {
+      width: 100px;
+    }
+    span {
+      border: 1px solid gray;
+      text-align: center;
+      height: 30px;
+      width: 30px;
+      font-size: 1.4rem;
+      border-radius: 50%;
+      background-color: rgb(217, 230, 233);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      color: red;
+    }
+  }
+}
+// @media only screen and (max-width: 860px) {
+//   body {
+//     background-color: rgb(249, 253, 255);
+//   }
+
+//   .main {
+
+//     .wrapper {
+
+//       grid-template-columns: 100% ;
+//       grid-template-rows: auto ;
+//       gap: 15px;
+//     }
+//   }
+
+// }

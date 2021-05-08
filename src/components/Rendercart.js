@@ -46,7 +46,7 @@ const Rendercart = ({ item }) => {
             <p>delete</p>
           </div>
         </div>
-        <p> ${price}</p>
+        <h3> ${price}</h3>
       </div>
       <hr />
     </>
