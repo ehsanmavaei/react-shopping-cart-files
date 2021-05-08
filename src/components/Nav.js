@@ -5,10 +5,8 @@ const Nav = () => {
   return (
     <nav className="nav">
       <div className="menu">
-       
         <GrCart className="icon cart" />
         <div className="amount">3</div>
-        
       </div>
     </nav>
   );
