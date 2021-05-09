@@ -1,7 +1,9 @@
 import React from "react";
 import { BiPlus } from "react-icons/bi";
 
+
 const SuggestionRender = ({ items }) => {
+
   const {
     id,
     title,
@@ -12,7 +14,7 @@ const SuggestionRender = ({ items }) => {
     totallNumber,
     orderAmount,
   } = items;
-  console.log("suggesion", title);
+  
 
   return (
     <div className="flex">
