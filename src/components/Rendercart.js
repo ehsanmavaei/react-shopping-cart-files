@@ -7,11 +7,17 @@ import { useGlobalContext } from "../Context/Context";
 
 const Rendercart = ({ item }) => {
   const { dispatch } = useGlobalContext();
-  const del=(id)=>{
-console.log(id)
 
-   dispatch({type:'DEL',id:id})
-  }
+  const decrement = (id, amount) => {
+    amount == 1
+      ? dispatch({ type: "DEL", id: id })
+      : dispatch({ type: "DECREMENT", id: id });
+  };
+  const del = (id) => {
+    console.log(id);
+
+    dispatch({ type: "DEL", id: id });
+  };
 
   const {
     id,
@@ -42,15 +48,15 @@ console.log(id)
             <p>In Stock</p>
           </div>
           <div className="btn flex-btn">
-            <button>
+            <button onClick={() => dispatch({ type: "INCREMENT", id: id })}>
               <BiPlus />
             </button>
             <p>{orderAmount}</p>
-            <button>
+            <button onClick={() => decrement(id, orderAmount)}>
               <BiMinus />
             </button>
           </div>
-          <div onClick={()=>del(id)} className="flex cursor">
+          <div onClick={() => del(id)} className="flex cursor">
             <RiDeleteBin6Line />
             <p>delete</p>
           </div>

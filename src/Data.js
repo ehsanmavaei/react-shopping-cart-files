@@ -2,7 +2,7 @@ const cart= [
     {
       id: 1,
       title: 'MacBook Air MWTJ2 2020',
-      price: 599.99,
+      price: 544.99,
       img:
         'https://res.cloudinary.com/de8iseeez/image/upload/v1620306534/MacBook_Air_MWTK2_2020_yqa0gu.jpg',
       color:'gray',
