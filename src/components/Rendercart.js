@@ -3,7 +3,16 @@ import { RiStore2Line, RiDeleteBin6Line } from "react-icons/ri";
 import { FiShoppingBag } from "react-icons/fi";
 import { BiPlus, BiMinus } from "react-icons/bi";
 
+import { useGlobalContext } from "../Context/Context";
+
 const Rendercart = ({ item }) => {
+  const { dispatch } = useGlobalContext();
+  const del=(id)=>{
+console.log(id)
+
+   dispatch({type:'DEL',id:id})
+  }
+
   const {
     id,
     title,
@@ -41,7 +50,7 @@ const Rendercart = ({ item }) => {
               <BiMinus />
             </button>
           </div>
-          <div className="flex cursor">
+          <div onClick={()=>del(id)} className="flex cursor">
             <RiDeleteBin6Line />
             <p>delete</p>
           </div>
