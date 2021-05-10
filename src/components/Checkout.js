@@ -1,17 +1,21 @@
-import React from 'react'
+import React from "react";
+import { useGlobalContext } from "../Context/Context";
 
 const Checkout = () => {
-    return (
-        <div className="checkout">
-            <h3>totall (5): $120400</h3>
-            <hr/>
-            <button className="cursor">Pay</button>
+  const { cart } = useGlobalContext();
+  let total = 0;
+  cart.forEach((element) => {
+    total += element.orderAmount * element.price;
+  });
+  console.log(total);
 
+  return (
+    <div className="checkout">
+      <h2>totall : ${Math.ceil(total)}</h2>
+      <hr />
+      <button className="cursor">Pay</button>
+    </div>
+  );
+};
 
-        </div>
-        
-        
-        )
-}
-
-export default Checkout
+export default Checkout;

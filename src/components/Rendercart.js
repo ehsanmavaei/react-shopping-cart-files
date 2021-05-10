@@ -61,7 +61,7 @@ const Rendercart = ({ item }) => {
             <p>delete</p>
           </div>
         </div>
-        <h3> ${price * orderAmount}</h3>
+        <h3> ${Math.round(price * orderAmount)}</h3>
       </div>
       <hr />
     </>

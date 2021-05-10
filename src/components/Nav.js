@@ -9,7 +9,9 @@ const Nav = () => {
     if (Object.keys(cart).length != 0) {
       const totall = cart.reduce((a, b) => ({
         orderAmount: a.orderAmount + b.orderAmount,
+      
       }));
+     
       return totall.orderAmount;
     } else {
       return 0;
