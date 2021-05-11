@@ -60,7 +60,7 @@ const suggestion = [
     {
       id: 6,
       title: ' ASUS 22MK400H 22inches',
-      price: 200.99,
+      price: 200,
       img:
         'https://res.cloudinary.com/de8iseeez/image/upload/v1620456167/22MK400H_xpqjwx.jpg',
       color:'black',
