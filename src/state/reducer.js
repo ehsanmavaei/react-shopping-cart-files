@@ -7,6 +7,11 @@ const reducer = (state, action) => {
         ...state,
         cart: state.cart.filter((item) => item.id != action.id),
       };
+    case "CLEARALL":
+      return {
+        ...state,
+        cart:[]
+      };
     case "ADDSUGGESTION":
       const filter = state.suggestion.filter((item) => item.id == action.id);
 

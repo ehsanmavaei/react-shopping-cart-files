@@ -170,6 +170,12 @@ hr {
   button:hover {
     color: rgb(198, 226, 198);
   }
+  .space {
+    justify-content: space-between;
+    span {
+      font-size: 1.3rem;
+    }
+  }
 }
 
 .suggetion {
@@ -199,12 +205,11 @@ hr {
   }
 }
 
-
-.emptycart{
-  font-size:2.4rem;
-  padding:90px 0;
-  text-align:center;
-  justify-content:center
+.emptycart {
+  font-size: 2.4rem;
+  padding: 90px 0;
+  text-align: center;
+  justify-content: center;
 }
 @media only screen and (max-width: 860px) {
   body {
