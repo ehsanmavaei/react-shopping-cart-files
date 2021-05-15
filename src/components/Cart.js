@@ -1,5 +1,4 @@
 import React from "react";
-import { cart } from "../Data";
 import Rendercart from "./Rendercart";
 import Checkout from "./Checkout";
 import Suggestion from "./Suggestion";
@@ -14,12 +13,11 @@ const Cart = () => {
     <div className="main">
       <div className="wrapper">
         <div className="list card">
-        
-         {cart.length!==0?cart.map((item) => (
-            <Rendercart item={item} key={item.id} />
-          )):  <EmptyCart/>}
-       
-   
+          {cart.length !== 0 ? (
+            cart.map((item) => <Rendercart item={item} key={item.id} />)
+          ) : (
+            <EmptyCart />
+          )}
         </div>
         <div className="checkout card">
           <Checkout />

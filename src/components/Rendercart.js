@@ -9,12 +9,12 @@ const Rendercart = ({ item }) => {
   const { dispatch } = useGlobalContext();
 
   const decrement = (id, amount) => {
-    amount == 1
+    amount === 1
       ? dispatch({ type: "DEL", id: id })
       : dispatch({ type: "DECREMENT", id: id });
   };
   const del = (id) => {
-    console.log(id);
+    
 
     dispatch({ type: "DEL", id: id });
   };
@@ -26,7 +26,7 @@ const Rendercart = ({ item }) => {
     img,
     color,
     Shipped,
-    totallNumber,
+
     orderAmount,
   } = item;
   return (

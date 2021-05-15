@@ -4,26 +4,18 @@ import { BiPlus } from "react-icons/bi";
 import { useGlobalContext } from "../Context/Context";
 
 const SuggestionRender = ({ items }) => {
-  const { cart,suggestion,dispatch } = useGlobalContext();
+  const { dispatch } = useGlobalContext();
 
-
-  const {
-    id,
-    title,
-    price,
-    img,
-    color,
-    Shipped,
-    totallNumber,
-    orderAmount,
-  } = items;
-  
+  const { id, title, price, img } = items;
 
   return (
     <div className="flex">
       <div className="img">
         <img src={img} alt="" />
-        <span className="cursor" onClick={()=>dispatch({type:"ADDSUGGESTION",id:id})}>
+        <span
+          className="cursor"
+          onClick={() => dispatch({ type: "ADDSUGGESTION", id: id })}
+        >
           <BiPlus />
         </span>
       </div>
