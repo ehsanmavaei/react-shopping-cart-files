@@ -1,34 +1,32 @@
-
-
 const reducer = (state, action) => {
   switch (action.type) {
     case "DEL":
       return {
         ...state,
-        cart: state.cart.filter((item) => item.id != action.id),
+        cart: state.cart.filter((item) => item.id !== action.id),
       };
     case "CLEARALL":
       return {
         ...state,
-        cart:[]
+        cart: [],
       };
     case "ADDSUGGESTION":
-      const filter = state.suggestion.filter((item) => item.id == action.id);
-
-      let match = false;
+      let match = [];
+      const filter = state.suggestion.filter((item) => item.id === action.id);
+      const filtered = filter[0].id;
 
       state.cart.forEach((element) => {
-        element.id == filter[0].id ? (match = true) : (match = false);
+        if (element.id === filtered) {
+          match.push(element.id);
+        }
       });
 
-      if (match) {
+      if (match.includes(filtered)) {
         return {
           ...state,
           cart: state.cart,
         };
       } else {
-        console.log("no  match");
-
         return {
           ...state,
           cart: [...state.cart, { ...filter[0] }],
@@ -39,7 +37,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         cart: state.cart.map((item) =>
-          item.id == action.id
+          item.id === action.id
             ? { ...item, orderAmount: item.orderAmount + 1 }
             : item
         ),
@@ -48,12 +46,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         cart: state.cart.map((item) =>
-          item.id == action.id
+          item.id === action.id
             ? { ...item, orderAmount: item.orderAmount - 1 }
             : item
         ),
       };
-      break;
 
     default:
       return state;

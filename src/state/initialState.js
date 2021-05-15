@@ -1,9 +1,7 @@
+import { cart, suggestion } from "../Data";
 
-import {cart,suggestion} from '../Data'
-
-const  initialState={
-   
-    cart:cart,
-    suggestion:suggestion,
-}
-export default initialState
+const initialState = {
+  cart: cart,
+  suggestion: suggestion,
+};
+export default initialState;
